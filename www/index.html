@@ -45,7 +45,7 @@ function scan() {
 		}
         }
  function stopAudio() {
-		myMedia.stop();
+		media.stop();
 		playing = false;
                 document.getElementById('play').src = "images/play.png";}
         function success() {
@@ -217,7 +217,7 @@ function scan() {
         <button onclick="scan();">Scan</a>
         <button onclick="playAudio('apple.mp3')">Play</button>
          <a href="#" onclick="playAudio('apple.mp3')"><img id="play" src="images/play.png"></a>
-   <a href="#" onclick="stopAudio('apple.mp3')"><img id="stop" src="images/stop.png"></a>
+   <a href="#" onclick="stopAudio()"><img id="stop" src="images/stop.png"></a>
         </div>
         <div data-role="footer" data-position="fixed">
 		<div data-role="navbar">
