@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <title>Kingcmobe Reserve</title>
 <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height"/>
-<link href="jquery-mobile/jquery.mobile.theme-1.0.min.css" rel="stylesheet" type="text/css"/>
-<link href="jquery-mobile/jquery.mobile.structure-1.0.min.css" rel="stylesheet" type="text/css"/>
-<script src="jquery-mobile/jquery-1.6.4.min.js" type="text/javascript"></script>
-<script src="jquery-mobile/jquery.mobile-1.0.min.js" type="text/javascript"></script>
+<link href="jquery-mobile/jquery.mobile.theme-1.4.2.css" rel="stylesheet" type="text/css"/>
+<link href="jquery-mobile/jquery.mobile.structure-1.4.2.css" rel="stylesheet" type="text/css"/>
+<script src="jquery-mobile/jquery-1.11.0.js" type="text/javascript"></script>
+<script src="jquery-mobile/jquery.mobile-1.4.2.js" type="text/javascript"></script>
  <script type="text/javascript" charset="utf-8" src="barcodescanner.js"></script>
 <script src="Flashlight.js"></script>
 <script src="phonegap.js"></script>
@@ -46,6 +46,16 @@ function scan() {
         }
     </script>
     
+    <script>
+	$( document ).on( "pagecreate", function() {
+    $( ".photopopup" ).on({
+        popupbeforeposition: function() {
+            var maxHeight = $( window ).height() - 60 + "px";
+            $( ".photopopup img" ).css( "max-height", maxHeight );
+        }
+    });
+});
+</script>
     		
 </head> 
 <body> 
@@ -244,7 +254,14 @@ function scan() {
     <h1>Header</h1>
   </div>
   <div data-role="content">
-  QRTag003
+  <a href="#popupPhotoLandscape" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-inline">Photo landscape</a>
+<a href="#popupPhotoPortrait" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-transition="fade">Photo portrait</a>
+<div data-role="popup" id="popupPhotoLandscape" class="photopopup" data-overlay-theme="a" data-corners="false" data-tolerance="30,15">
+    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="images/guide/img2.jpg" alt="Photo landscape">
+</div>
+<div data-role="popup" id="popupPhotoPortrait" class="photopopup" data-overlay-theme="a" data-corners="false" data-tolerance="30,15">
+    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="images/guide/img3.jpg" alt="Photo portrait">
+</div>
         <button onclick="scan();">Scan</a>
         </div>
  <div data-role="footer" data-position="fixed">
