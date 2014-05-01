@@ -47,30 +47,37 @@ function scan() {
 </head> 
 <body> 
 
-<div data-role="page" id="page">
+<!--Start Page-->
+
+<div id="main" data-role="page">
 	<div data-role="header">
-		<h1>Page One</h1>
+		<h1>Kingcombe Centre</h1>
 	</div>
-	<div data-role="content">	
-		<ul data-role="listview">
-			<li><a href="#page2">Page Two</a></li>
-            <li><a href="#page3">Page Three</a></li>
-			<li><a href="#page4">Page Four</a></li>
-		</ul>		
-	</div>
-	<div data-role="footer">
-		<h4>Page Footer</h4>
+	<div data-role="content"> <img src="images/mapcompass.png" width="128" height="128">
+    <button onclick="scan();">Scan</a> </div>
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+        
+   <ul>
+      <li><a href="#main">Guide</a></li>
+      <li><a href="#map">Map</a></li>
+      <li><a href="#kids">Kids</a></li>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#info">Info</a></li>
+   </ul>
+</div><!-- /navbar -->
 	</div>
 </div>
 
-<div data-role="page" id="page2">
+<!--End Start Page-->
+<div data-role="page" id="map">
 	<div data-role="header">
 		<h1>Page Two</h1>
 	</div>
 	<div data-role="content">	
 		The qr code brought you here
         You should here Apple.mp3
-       	<img src="apple.png" onload="playAudio('apple.mp3')">
+       
          <button onclick="playAudio('apple.mp3')">Play Some Audio</button>
 	</div>
 	<div data-role="footer">
@@ -78,32 +85,219 @@ function scan() {
 	</div>
 </div>
 
-<div data-role="page" id="page3">
+<div id="kids" data-role="page">
 	<div data-role="header">
-		<h1>Code Scan</h1>
+		<h1>Kids</h1>
 	</div>
-	<div data-role="content">	
-	<button onclick="scan();">Scan</a>		
-	</div>
-	<div data-role="footer">
-		<h4>Page Footer</h4>
+	<div data-role="content"> 
+    <a href="#QRTag001">QRTag001</a>
+     </div>
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+        
+   <ul>
+      <li><a href="#main">Guide</a></li>
+      <li><a href="#map">Map</a></li>
+      <li><a href="#kids">Kids</a></li>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#info">Info</a></li>
+   </ul>
+</div><!-- /navbar -->
 	</div>
 </div>
 
-<div data-role="page" id="page4">
+<!--End Kids Page-->
+
+<!--Tools Page-->
+
+<div id="tools" data-role="page">
 	<div data-role="header">
-		<h1>Audio Test</h1>
+		<h1>Tools</h1>
 	</div>
-	<div data-role="content">	
-		<h1>Playing Audio</h1>
-    <button onclick="playAudio('apple.mp3')">Play Some Audio</button>
- 
-   
-	</div>
-	<div data-role="footer">
-		<h4>Page Footer</h4>
+	<div data-role="content"> 
+    <button>Compass</a>
+    <button>Camera</a>
+    <button>Torch</a>
+     </div>
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+        
+   <ul>
+      <li><a href="#main">Guide</a></li>
+      <li><a href="#map">Map</a></li>
+      <li><a href="#kids">Kids</a></li>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#info">Info</a></li>
+   </ul>
+</div><!-- /navbar -->
 	</div>
 </div>
+
+<!--End Tools Page-->
+
+<!--Info Page-->
+
+<div id="info" data-role="page">
+	<div data-role="header">
+		<h1>Info</h1>
+	</div>
+	<div data-role="content"> 
+    
+     </div>
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+        
+   <ul>
+      <li><a href="#main">Guide</a></li>
+      <li><a href="#map">Map</a></li>
+      <li><a href="#kids">Kids</a></li>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#info">Info</a></li>
+   </ul>
+</div><!-- /navbar -->
+	</div>
+</div>
+
+<!--End Kids Page-->
+
+<!--==================================================-->
+<!--QR Code Pages-->
+<!--==================================================-->
+
+<div data-role="page" id="QRTag001">
+        <div data-role="header">
+          <h1>Header</h1>
+        </div>
+        <div data-role="content">
+        QRTag001
+        <button onclick="scan();">Scan</a>
+        <button onclick="playAudio('apple.mp3')">Play</button>
+        </div>
+        <div data-role="footer">
+          <h4>Footer</h4>
+        </div>
+      </div>
+      
+<div data-role="page" id="QRTag002">
+  <div data-role="header">
+    <h1>Header</h1>
+  </div>
+  <div data-role="content">
+  QRTag002
+        <button onclick="scan();">Scan</a>
+        </div>
+  <div data-role="footer">
+    <h4>Footer</h4>
+  </div>
+</div>
+
+<div data-role="page" id="QRTag003">
+  <div data-role="header">
+    <h1>Header</h1>
+  </div>
+  <div data-role="content">
+  QRTag003
+        <button onclick="scan();">Scan</a>
+        </div>
+  <div data-role="footer">
+    <h4>Footer</h4>
+  </div>
+</div>
+
+<div data-role="page" id="QRTag004">
+  <div data-role="header">
+    <h1>Header</h1>
+  </div>
+  <div data-role="content">
+  QRTag004
+        <button onclick="scan();">Scan</a>
+        </div>
+  <div data-role="footer">
+    <h4>Footer</h4>
+  </div>
+</div>
+
+<div data-role="page" id="QRTag005">
+  <div data-role="header">
+    <h1>Header</h1>
+  </div>
+  <div data-role="content">
+  QRTag005
+        <button onclick="scan();">Scan</a>
+        </div>
+  <div data-role="footer">
+    <h4>Footer</h4>
+  </div>
+</div>
+
+<div data-role="page" id="QRTag006">
+  <div data-role="header">
+    <h1>Header</h1>
+  </div>
+  <div data-role="content">
+  QRTag006
+        <button onclick="scan();">Scan</a>
+        </div>
+  <div data-role="footer">
+    <h4>Footer</h4>
+  </div>
+</div>
+
+<div data-role="page" id="QRTag007">
+  <div data-role="header">
+    <h1>Header</h1>
+  </div>
+  <div data-role="content">
+  QRTag007
+        <button onclick="scan();">Scan</a>
+        </div>
+  <div data-role="footer">
+    <h4>Footer</h4>
+  </div>
+</div>
+
+<div data-role="page" id="QRTag008">
+  <div data-role="header">
+    <h1>Header</h1>
+  </div>
+  <div data-role="content">
+  QRTag008
+        <button onclick="scan();">Scan</a>
+        </div>
+  <div data-role="footer">
+    <h4>Footer</h4>
+  </div>
+</div>
+
+<div data-role="page" id="QRTag009">
+  <div data-role="header">
+    <h1>Header</h1>
+  </div>
+  <div data-role="content">
+  QRTag009
+        <button onclick="scan();">Scan</a>
+        </div>
+  <div data-role="footer">
+    <h4>Footer</h4>
+  </div>
+</div>
+
+<div data-role="page" id="QRTag010">
+  <div data-role="header">
+    <h1>Header</h1>
+  </div>
+  <div data-role="content">
+  QRTag010
+        <button onclick="scan();">Scan</a>
+        </div>
+  <div data-role="footer">
+    <h4>Footer</h4>
+  </div>
+</div>
+
+<!--==================================================-->
+<!--End QR Code Pages-->
+<!--==================================================-->
 
 </body>
 </html>
