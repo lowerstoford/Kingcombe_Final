@@ -32,10 +32,22 @@ function scan() {
             }
  
             var media = new Media(src, success, error_error);
- 
-            media.play();
+ 				var playing = false;
+				
+           if (!playing) {
+                        media.play();	
+			document.getElementById('play').src = "images/pause.png";
+			playing = true;	
+		} else {
+			media.pause();
+                        document.getElementById('play').src = "images/play.png";    
+                        playing = false; 
+		}
         }
- 
+ function stopAudio() {
+		myMedia.stop();
+		playing = false;
+                document.getElementById('play').src = "images/play.png";}
         function success() {
             // ignore
         }
@@ -105,6 +117,7 @@ function scan() {
         You should here Apple.mp3
        
          <button onclick="playAudio('apple.mp3')">Play Some Audio</button>
+        
 	</div>
 	<div data-role="footer">
 		<h4>Page Footer</h4>
@@ -203,6 +216,8 @@ function scan() {
         </div>
         <button onclick="scan();">Scan</a>
         <button onclick="playAudio('apple.mp3')">Play</button>
+         <a href="#" onclick="playAudio('apple.mp3')"><img id="play" src="images/play.png"></a>
+   <a href="#" onclick="stopAudio('apple.mp3')"><img id="stop" src="images/stop.png"></a>
         </div>
         <div data-role="footer" data-position="fixed">
 		<div data-role="navbar">
