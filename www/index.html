@@ -31,7 +31,7 @@ function scan() {
                 src = '/android_asset/www/' + src;
             }
  
-            var media = new Media(src, success, error_error);
+            var media = new Media(src, stopAudio, null);
  				var playing = false;
 				
            if (!playing) {
