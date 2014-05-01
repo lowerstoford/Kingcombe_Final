@@ -8,7 +8,7 @@
 <script src="jquery-mobile/jquery-1.6.4.min.js" type="text/javascript"></script>
 <script src="jquery-mobile/jquery.mobile-1.0.min.js" type="text/javascript"></script>
  <script type="text/javascript" charset="utf-8" src="barcodescanner.js"></script>
-<script src="js/plugins/Flashlight.js"></script>
+<script src="Flashlight.js"></script>
 <script src="phonegap.js"></script>
 <script>
 function scan() {
@@ -45,16 +45,7 @@ function scan() {
         }
     </script>
     
-    <script>
-	
-	window.plugins.flashlight.available(function(isAvailable) {
-  if (isAvailable) {
-	  window.plugins.flashlight.toggle();
-	  } else {
-    alert("Flashlight not available on this device");
-  }
-});
-    </script>		
+    		
 </head> 
 <body> 
 
