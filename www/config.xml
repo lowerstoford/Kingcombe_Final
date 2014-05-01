@@ -3,17 +3,17 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.phonegap.hello-world"
-        version   = "1.0.0">
+      id        = "com.phonegap.DWTK_App"
+        version   = "1.0.1">
 
-    <name>Hello World</name>
+    <name>Kingcombe Guide</name>
 
     <description>
-        Hello World sample application that responds to the deviceready event.
+        DWT Kingcombe Centre Guide
     </description>
 
-    <author href="http://phonegap.com" email="support@phonegap.com">
-        PhoneGap Team
+    <author href="http://lowerstoford.co.uk" email="lee@lowerstoford.co.uk">
+        Lowerstoford Developments
     </author>
 
     <!--
@@ -24,7 +24,7 @@
     <preference name="permissions"                value="none"/>
 
     <!-- Customize your app and platform with the preference element. -->
-    <preference name="phonegap-version"           value="3.1.0" />          <!-- all: current version of PhoneGap -->
+    <preference name="phonegap-version"           value="3.3.0" />          <!-- all: current version of PhoneGap -->
     <preference name="orientation"                value="default" />        <!-- all: default means both landscape and portrait are enabled -->
     <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
     <preference name="fullscreen"                 value="true" />           <!-- all: hides the status bar at the top of the screen -->
